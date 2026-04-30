@@ -218,6 +218,7 @@ int main(){
 
 // tohle je program shopu a pri koupi mece 
 //do{tohle je to do
+do{
 shopy();
 do{
 cout<<"Do jakého obchodu nebo areny chcete jit?\n1-Obchod se zbranemi\n2-Obchod s vylepsenim\n3-Arena\n";
@@ -301,6 +302,7 @@ if (volbaobchod==1){
         volbaobchodne=1;
     }
 }else if(volbaobchod==3){
+    
     cout<<"Vytejte v arene.\n";
     cout<<"Budou taby probihat boje s neprately, pokud vyhrajete ziskate penize ale pokud prohrajete je pro vas game over\n";
     cout<<"a budete muset zacit hru odznova.\n";
@@ -404,6 +406,7 @@ if (volbaobchod==1){
        
     
 }
+}while(zivoty>0&&nepritel<16&&volbaobchodne!=1);
 }
 
         
