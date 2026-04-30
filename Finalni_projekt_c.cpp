@@ -137,8 +137,8 @@ int main(){
         cout<<"\nRychlost:5";
         cout<<"\nSuper utok:50";
         zivoty=150;
-        superutok=2*utok;
         utok=25;
+        superutok=2*utok;
         brneni=15;
         rychlost=5;
     }else if(nahled==2){
@@ -148,8 +148,8 @@ int main(){
         cout<<"\nRychlost:10";
         cout<<"\nSuper utok:90";
         zivoty=80;
-        superutok=2*utok;
         utok=45;
+        superutok=2*utok;
         brneni=2;
         rychlost=10;
     }else if(nahled==3){
@@ -159,8 +159,8 @@ int main(){
         cout<<"\nRychlost:15";
         cout<<"\nSuper utok:60";
         zivoty=110;
-        superutok=2*utok;
         utok=30;
+        superutok=2*utok;
         brneni=7;
         rychlost=15;
     }else if(nahled==4){
@@ -170,8 +170,8 @@ int main(){
         cout<<"\nRychlost:25";
         cout<<"\nSuper utok:110";
         zivoty=90;
-        superutok=2*utok;
         utok=55;
+        superutok=2*utok;
         brneni=4;
         rychlost=25;
 
@@ -234,6 +234,8 @@ if (volbaobchod==1){
         cout<<"Koupili jste zbran level 1";
         utok=utok+pomocnapromena1;
         pomocnapromena1=0;
+        superutok=2*utok;
+        penize=penize-0;    
 
     }else if(volbaobchod==2&&penize>=500&&levelmece==0){
         cout<<"Koupili jste zbran level 2";
@@ -241,24 +243,28 @@ if (volbaobchod==1){
         pomocnapromena2=0;
         penize=penize-500;
         levelmece=1;
+        superutok=2*utok;
     }else if(volbaobchod==3&&penize>=800&&levelmece==1){
         cout<<"Koupili jste zbran level 3";
         utok=utok+pomocnapromena3;
         pomocnapromena3=0;
         penize=penize-800;
         levelmece=2;
+        superutok=2*utok;   
     }else if(volbaobchod==4&&penize>=1200&&levelmece==2){
         cout<<"Koupili jste zbran level 4";
         utok=utok+pomocnapromena4;
         pomocnapromena4=0;
         penize=penize-1200;
         levelmece=3;
+        superutok=2*utok;
     }else if(volbaobchod==5&&penize>=1800&&levelmece==3){
         cout<<"Koupili jste zbran level 5";   
         utok=utok+pomocnapromena5;
         pomocnapromena5=0;
         penize=penize-1800;
         levelmece=4;
+        superutok=2*utok;
     }  
     if(volbaobchod==6){
         volbaobchodne=1;
@@ -280,6 +286,7 @@ if (volbaobchod==1){
         utok=utok+3;
         penize=penize-cenautok;
         cenautok=cenautok+100;
+        superutok=2*utok;
     }else if(volbaobchod==3&&penize>=cenabrneni){
         cout<<"Koupili jste vylepseni brneni";
         brneni=brneni+3;
