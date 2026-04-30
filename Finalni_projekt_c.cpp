@@ -302,7 +302,7 @@ if (volbaobchod==1){
         volbaobchodne=1;
     }
 }else if(volbaobchod==3){
-    
+
     cout<<"Vytejte v arene.\n";
     cout<<"Budou taby probihat boje s neprately, pokud vyhrajete ziskate penize ale pokud prohrajete je pro vas game over\n";
     cout<<"a budete muset zacit hru odznova.\n";
@@ -409,4 +409,4 @@ if (volbaobchod==1){
 }while(zivoty>0&&nepritel<16&&volbaobchodne!=1);
 }
 
-        
+        //nefunguje kdyz porazim nepratele prvniho hned se zapne dalsi
