@@ -306,7 +306,7 @@ if (volbaobchod==1){
     cout<<"Vytejte v arene.\n";
     cout<<"Budou taby probihat boje s neprately, pokud vyhrajete ziskate penize ale pokud prohrajete je pro vas game over\n";
     cout<<"a budete muset zacit hru odznova.\n";
-    cout<<"Staty vaseho nepritele:\n";
+    cout<<"Staty vaseho "<<nepritel+1<<" nepritele:\n";
     cout<<"Zivoty: "<<polezivotynepritel[nepritel]<<"\nUtok: "<<poleutoknepritel[nepritel]<<"\nSuper utok: "<<polesuperutoknepritel[nepritel]<<"\nOdmena: "<<poleodmenanepritel[nepritel]<<"\n";
     cout<<"Chcete spustit boj s nepritelem? 1-ano 2-ne";
     cin>>volbaobchod;
