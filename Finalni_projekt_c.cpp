@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+int zivotymax;
 int nepritel=0;
 int energie=10;
 int superutok;
@@ -136,6 +137,7 @@ int main(){
         cout<<"\nBrneni:15";
         cout<<"\nRychlost:5";
         cout<<"\nSuper utok:50";
+        zivotymax=150;
         zivoty=150;
         utok=25;
         superutok=2*utok;
@@ -147,6 +149,7 @@ int main(){
         cout<<"\nBrneni:2";
         cout<<"\nRychlost:10";
         cout<<"\nSuper utok:90";
+        zivotymax=80;
         zivoty=80;
         utok=45;
         superutok=2*utok;
@@ -159,6 +162,7 @@ int main(){
         cout<<"\nRychlost:15";
         cout<<"\nSuper utok:60";
         zivoty=110;
+        zivotymax=110;
         utok=30;
         superutok=2*utok;
         brneni=7;
@@ -170,6 +174,7 @@ int main(){
         cout<<"\nRychlost:25";
         cout<<"\nSuper utok:110";
         zivoty=90;
+        zivotymax=90;   
         utok=55;
         superutok=2*utok;
         brneni=4;
@@ -280,6 +285,7 @@ if (volbaobchod==1){
     if(volbaobchod==1&&penize>=cenazivoty){
         cout<<"Koupili jste vylepseni zivotu";
         zivoty=zivoty+5;
+        zivotymax=zivotymax+5;
         penize=penize-cenazivoty;
         cenazivoty=cenazivoty+100;
     }else if(volbaobchod==2&&penize>=cenautok){
@@ -319,35 +325,36 @@ if (volbaobchod==1){
         if(volbaobchod==1&&energie >=1){
             cout<<"Zautocili jste basic utokem a udelali jste "<<utok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-utok;
-            if(polezivotynepritel[nepritel]<=0){
-                cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
-                penize=penize+poleodmenanepritel[nepritel];
-                nepritel=nepritel+1;
-            }else if(polezivotynepritel[nepritel]>0){
+            if(polezivotynepritel[nepritel]>0){
                 cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
                 zivoty=zivoty-poleutoknepritel[nepritel];
-                energie=energie-1;
+                energie=energie-1;                                    //udelat aby mi to pridv     
                 if(zivoty<=0){
-                    cout<<"Prohrali jste a je konec hry\n";
+                    cout<<"\nProhrali jste a je konec hry\n";
                     return 0;
                 }
+            }else if(polezivotynepritel[nepritel]<=0){
+                cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
+                penize=penize+poleodmenanepritel[nepritel];
             }
+
+
         }else if(volbaobchod==2&&energie>=3){
             cout<<"Zautocili jste super utokem a udelali jste "<<superutok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-superutok;
-            if(polezivotynepritel[nepritel]<=0){
-                cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
-                penize=penize+poleodmenanepritel[nepritel];
-                nepritel=nepritel+1;
-            }else if(polezivotynepritel[nepritel]>0){
+            if(polezivotynepritel[nepritel]>0){
                 cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
                 zivoty=zivoty-poleutoknepritel[nepritel];
-                energie=energie-3;
+                energie=energie-3;                                         
                 if(zivoty<=0){
                     cout<<"Prohrali jste a je konec hry\n";
                     return 0;
                 }
+            }else if(polezivotynepritel[nepritel]<=0){
+                cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
+                penize=penize+poleodmenanepritel[nepritel];
             }
+
         }else if(volbaobchod==3){
             cout<<"Utekli jste z boje\n";
             volbaobchod=3;
@@ -365,40 +372,45 @@ if (volbaobchod==1){
         if(volbaobchod==1&&energie >=1){
             cout<<"Zautocili jste basic utokem a udelali jste "<<utok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-utok;
-            if(polezivotynepritel[nepritel]<=0){
-                cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
-                penize=penize+poleodmenanepritel[nepritel];
-                nepritel=nepritel+1;
-            }else if(polezivotynepritel[nepritel]>0){
+            if(polezivotynepritel[nepritel]>0){
                 cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
                 zivoty=zivoty-poleutoknepritel[nepritel];
-                energie=energie-1;
+                energie=energie-1;                                         
                 if(zivoty<=0){
                     cout<<"Prohrali jste a je konec hry\n";
                     return 0;
                 }
+            }else if(polezivotynepritel[nepritel]<=0){
+                cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
+                penize=penize+poleodmenanepritel[nepritel];
             }
+
         }else if(volbaobchod==2&&energie>=3){
             cout<<"Zautocili jste super utokem a udelali jste "<<superutok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-superutok;
-            if(polezivotynepritel[nepritel]<=0){
-                cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
-                penize=penize+poleodmenanepritel[nepritel];
-                
-            }else if(polezivotynepritel[nepritel]>0){
+            if(polezivotynepritel[nepritel]>0){
                 cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
                 zivoty=zivoty-poleutoknepritel[nepritel];
-                energie=energie-3;
+                energie=energie-3;                                         
                 if(zivoty<=0){
                     cout<<"Prohrali jste a je konec hry\n";
                     return 0;
                 }
+            }else if(polezivotynepritel[nepritel]<=0){
+                cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
+                penize=penize+poleodmenanepritel[nepritel];
             }
+
         }else if(volbaobchod==3){
             cout<<"Utekli jste z boje\n";
             volbaobchod=3;
         }
         }while(volbaobchod!=3&&polezivotynepritel[nepritel]>0&&zivoty>0);
+        if(volbaobchod!=3){
+            zivoty=zivotymax;
+            nepritel=nepritel+1;
+            energie=energie+1;
+          }
 
 
     }
@@ -406,7 +418,13 @@ if (volbaobchod==1){
        
     
 }
-}while(zivoty>0&&nepritel<16&&volbaobchodne!=1);
+}while(zivoty>0&&nepritel<16);
 }
 
         //nefunguje kdyz porazim nepratele prvniho hned se zapne dalsi
+        //pridavani energie ukazovani enrgie a cim vetsi rychlost tim vetsi moznost na uhnuti pred 
+        //nepritelem a kdyz tam budou dva neprateletak to dodelat a vymislet k cemu bude brneni a grafiku
+        //kdyz tam budou dva tak udelat dalsi if k tomu jak jsou bossove a mini bosove tak za ne udelak kdyz tam bude treba
+        //nepritel 5 a nebo 10 tak tam udelat misto jednich zivotu dva a super utok bude pridavat oboum a budu si
+        //muset vybrat na jakeho chci utocit a v stringu jen misto jendoho jmena tam dam dva hned za sebe
+
