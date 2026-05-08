@@ -20,7 +20,7 @@ int vyber;
 int volbaobchod;
 int volbaobchodne=0; //pokud v shopu clovek zvoli ze nechce neco nakupovat bude to tam jako volbaobcodne =1 a nakonci vseho bude do while volbaobcod==1
 string jmenonepritele[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Upir","Zombik","Obr","Vampir","Drak","Minotaur","Mumie","Kobold","Ork","Troll","Ghoul"};
-string jmenonepriteledvojboj[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Lemon","Upir","Zombik","Obr","Vampir","Drak","Piditoraur","Mumie","Kobold","Ork","Troll","Ghoul"};
+string jmenonepriteledvojboj[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Papir","Zombik","Obr","Vampir","Drak","Piditoraur","Mumie","Kobold","Ork","Troll","Ghoul"};
 int polezivotynepritel[16] = {100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250};
 int polezivotyprodvojboj[16] = {100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250};
 int polezivotynepritelmax[16] = {100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250};
@@ -405,6 +405,7 @@ if (volbaobchod==1){
         cout<<"nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
         zivoty=zivoty-poleutoknepritel[nepritel];
         do{
+        boj();
         cout<<"Zadejte co chcete udelat:\n1-Basic utok-1energie\n2-Super utok-3energie\n3-Utek\n";
         cin>>volbaobchod;
         if(volbaobchod==1&&energie >=1){
