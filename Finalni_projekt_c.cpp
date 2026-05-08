@@ -1,6 +1,8 @@
 #include <iostream>
+#include <random>
 using namespace std;
 int zivotymax;
+int randomcislo;
 int dvojbojvyberutoku;
 int nepritel=0;
 int energie=10000;
@@ -54,7 +56,7 @@ cout<<"_________________________________________________________________________
 cout<<"_________________________________________________________________________________________________________________________________\n\n";
 
 cout<<"        "<<zivoty<<"                                                                 "<<polezivotynepritel[nepritel]<<"  a  "<<polezivotyprodvojboj[nepritel]<<"           \n";
-cout<<"_________________________________________________________________________________________________________________________________";
+cout<<"_________________________________________________________________________________________________________________________________\n";
 
     
 
@@ -78,7 +80,7 @@ cout<<"_________________________________________________________________________
 cout<<"_________________________________________________________________________________________________________________________________\n\n";
 
 cout<<"        "<<zivoty<<"                                                                 "<<polezivotynepritel[nepritel]<<"          \n";
-cout<<"_________________________________________________________________________________________________________________________________";
+cout<<"_________________________________________________________________________________________________________________________________\n";
 
     
 } 
@@ -151,8 +153,10 @@ cout<<"|________________________________________________________________________
 
 
 
-
+random_device rd;
+mt19937 gen(rd());
 int main(){
+    uniform_int_distribution<> sance(1, 100);
     do{
     do{
     cout<<"Na vyber mate 4 postavy:\n1-Rytir\n2-Carodej\n3-Lovec\n4-Assasin";
@@ -355,13 +359,19 @@ if (volbaobchod==1){
             cout<<"Zautocili jste basic utokem a udelali jste "<<utok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-utok;
             if(polezivotynepritel[nepritel]>0){
-                cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                zivoty=zivoty-poleutoknepritel[nepritel];
-                energie=energie-1;                                   //udelat aby mi to pridv     
-                if(zivoty<=0){
-                    cout<<"\nProhrali jste a je konec hry\n";
-                    return 0;
+                randomcislo=sance(gen);
+                if(randomcislo<=rychlost){
+                    cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                }else if(randomcislo>rychlost){
+                    cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
+                    zivoty=zivoty-poleutoknepritel[nepritel];
+                    energie=energie-1;                                   //udelat aby mi to pridv     
+                    if(zivoty<=0){
+                        cout<<"\nProhrali jste a je konec hry\n";
+                        return 0;
+                    }
                 }
+            
             }else if(polezivotynepritel[nepritel]<=0){
                 cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
                 penize=penize+poleodmenanepritel[nepritel];
@@ -373,12 +383,17 @@ if (volbaobchod==1){
             cout<<"Zautocili jste super utokem a udelali jste "<<superutok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-superutok;
             if(polezivotynepritel[nepritel]>0){
-                cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                zivoty=zivoty-poleutoknepritel[nepritel];
-                energie=energie-3;                                         
-                if(zivoty<=0){
-                    cout<<"Prohrali jste a je konec hry\n";
-                    return 0;
+                randomcislo=sance(gen);
+                if(randomcislo<=rychlost){
+                    cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                }else if(randomcislo>rychlost){
+                    cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
+                    zivoty=zivoty-poleutoknepritel[nepritel];
+                    energie=energie-3;                                         
+                    if(zivoty<=0){
+                        cout<<"Prohrali jste a je konec hry\n";
+                        return 0;
+                    }
                 }
             }else if(polezivotynepritel[nepritel]<=0){
                 cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
@@ -402,8 +417,13 @@ if (volbaobchod==1){
         cout<<"boj se spustil.\n";
         cout<<"Vas protivník je mini-boss nebo boss tim padem zacina on a je o neco silnejsi nez ostatni nepratele\n";
         boj();
+        randomcislo=sance(gen);
+        if(randomcislo<=rychlost){
+            cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+        }else if(randomcislo>rychlost){
         cout<<"nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
         zivoty=zivoty-poleutoknepritel[nepritel];
+        }
         do{
         boj();
         cout<<"Zadejte co chcete udelat:\n1-Basic utok-1energie\n2-Super utok-3energie\n3-Utek\n";
@@ -413,12 +433,17 @@ if (volbaobchod==1){
             cout<<"Zautocili jste basic utokem a udelali jste "<<utok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-utok;
             if(polezivotynepritel[nepritel]>0){
-                cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                zivoty=zivoty-poleutoknepritel[nepritel];
-                energie=energie-1;                                         
-                if(zivoty<=0){
-                    cout<<"Prohrali jste a je konec hry\n";
-                    return 0;
+                randomcislo=sance(gen);
+                if(randomcislo<=rychlost){
+                    cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                }else if(randomcislo>rychlost){
+                    cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
+                    zivoty=zivoty-poleutoknepritel[nepritel];
+                    energie=energie-1;                                         
+                    if(zivoty<=0){
+                        cout<<"Prohrali jste a je konec hry\n";
+                        return 0;
+                    }
                 }
             }else if(polezivotynepritel[nepritel]<=0){
                 cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
@@ -430,12 +455,17 @@ if (volbaobchod==1){
             cout<<"Zautocili jste super utokem a udelali jste "<<superutok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-superutok;
             if(polezivotynepritel[nepritel]>0){
-                cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                zivoty=zivoty-poleutoknepritel[nepritel];
-                energie=energie-3;                                         
-                if(zivoty<=0){
-                    cout<<"Prohrali jste a je konec hry\n";
-                    return 0;
+                randomcislo=sance(gen);
+                if(randomcislo<=rychlost){
+                    cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                }else if(randomcislo>rychlost){
+                     cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
+                     zivoty=zivoty-poleutoknepritel[nepritel];
+                    energie=energie-3;                                         
+                    if(zivoty<=0){
+                        cout<<"Prohrali jste a je konec hry\n";
+                        return 0;
+                    }
                 }
             }else if(polezivotynepritel[nepritel]<=0){
                 cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
@@ -475,18 +505,28 @@ if (volbaobchod==1){
                 polezivotyprodvojboj[nepritel]=polezivotyprodvojboj[nepritel]-utok;
             }
             if(polezivotynepritel[nepritel]>0){
-                cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                zivoty=zivoty-poleutoknepritel[nepritel];                                    //udelat aby mi to pridv     
-                if(zivoty<=0){
-                    cout<<"\nProhrali jste a je konec hry\n";
-                    return 0;
+                randomcislo=sance(gen);
+                if(randomcislo<=rychlost){
+                    cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                }else if(randomcislo>rychlost){
+                    cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
+                    zivoty=zivoty-poleutoknepritel[nepritel];                                    //udelat aby mi to pridv     
+                    if(zivoty<=0){
+                        cout<<"\nProhrali jste a je konec hry\n";
+                        return 0;
+                    }
                 }
             }else if(polezivotyprodvojboj[nepritel]>0){
-                cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                zivoty=zivoty-poleutoknepritel[nepritel];
-                if(zivoty<=0){
-                    cout<<"\nProhrali jste a je konec hry\n";
-                    return 0;
+                randomcislo=sance(gen);
+                if(randomcislo<=rychlost){
+                    cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                }else if(randomcislo>rychlost){
+                    cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
+                    zivoty=zivoty-poleutoknepritel[nepritel];
+                    if(zivoty<=0){
+                        cout<<"\nProhrali jste a je konec hry\n";
+                        return 0;
+                    }
                 }
             }else if(polezivotynepritel[nepritel]<=0&&polezivotyprodvojboj[nepritel]<=0){
                 cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
@@ -501,18 +541,28 @@ if (volbaobchod==1){
             polezivotyprodvojboj[nepritel]=polezivotyprodvojboj[nepritel]-superutok;
             energie=energie-3;
             if(polezivotynepritel[nepritel]>0){
-                cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                zivoty=zivoty-poleutoknepritel[nepritel];                                         
-                if(zivoty<=0){
-                    cout<<"Prohrali jste a je konec hry\n";
-                    return 0;
+                randomcislo=sance(gen);
+                if(randomcislo<=rychlost){
+                    cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";   
+                }else if(randomcislo>rychlost){
+                    cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
+                    zivoty=zivoty-poleutoknepritel[nepritel];                                         
+                    if(zivoty<=0){
+                        cout<<"Prohrali jste a je konec hry\n";
+                        return 0;
+                    }
                 }
             }else if(polezivotyprodvojboj[nepritel]>0){
-                cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                zivoty=zivoty-poleutoknepritel[nepritel];
-                if(zivoty<=0){
-                    cout<<"Prohrali jste a je konec hry\n";
-                    return 0;
+                randomcislo=sance(gen);
+                if(randomcislo<=rychlost){
+                    cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                }else if(randomcislo>rychlost){}{
+                    cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
+                    zivoty=zivoty-poleutoknepritel[nepritel];
+                    if(zivoty<=0){
+                        cout<<"Prohrali jste a je konec hry\n";
+                        return 0;
+                    }
                 }
             }else if(polezivotynepritel[nepritel]<=0){
                 cout<<"Vyhrali jste boj a ziskali jste "<<poleodmenanepritel[nepritel]<<" penize\n";
