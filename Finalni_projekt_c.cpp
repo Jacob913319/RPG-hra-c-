@@ -90,7 +90,7 @@ cout<<"          ___|___               ___|___               ___|___            
 cout<<"           |  |                  |  |                  |  |                  |  |                  |  |    \n";                                                                                                                 
 cout<<"           |  |                  |  |                  |  |                  |  |                  |  |    \n";                              
 cout<<"          _|  |_                _|  |_                _|  |_                _|  |_                _|  |_    \n";                                     
-cout<<"       __|  ˇˇ  |__          __|  ˇˇ  |__          __|  ˇˇ  |__          __|  ˇˇ  |__          __|  ˇˇ  |__  \n";                                        
+cout<<"       __|  VV  |__          __|  VV  |__          __|  VV  |__          __|  VV  |__          __|  VV  |__  \n";                                        
 cout<<"______|____________|________|____________|________|____________|________|____________|________|____________|_________\n";
 cout<<"|           1                     2                      3                     4                     5              | \n";
 cout<<"|cena     free                   500                    800                  1200                  1800             | \n";
@@ -265,6 +265,7 @@ if (volbaobchod==1){
     mece();
 
     do{
+    cout<<"Vase penize jsou: "<<penize<<"\n";
     cout<<"Jaky mec si chcete koupit?\nvas level mece je "<<levelmece<<" \n6- nechci kupovat zadny";
     cin>>volbaobchod;
     }while(volbaobchod!=1&&volbaobchod!=2&&volbaobchod!=3&&volbaobchod!=4&&volbaobchod!=5&&volbaobchod!=6);
@@ -311,6 +312,7 @@ if (volbaobchod==1){
 }else if(volbaobchod==2){
     vylepseni();
     do{
+    cout<<"vase penize jsou: "<<penize<<"\n";
     cout<<"jake vylepseni si chcete koupit pro vasi postavu?\n1-Zivoty\n2-Utok\n3-Brneni\n4-Rychlost\n5-Nechci nic kupovat\n";
     cin>>volbaobchod;
     }while(volbaobchod!=1&&volbaobchod!=2&&volbaobchod!=3&&volbaobchod!=4&&volbaobchod!=5);
@@ -589,6 +591,7 @@ if (volbaobchod==1){
     
 }
 }while(zivoty>0&&nepritel<16);
+cout<<"Gratulujeme, porazili jste vsechny nepratele a vyhrali jste hru\n";
 }
 
         //pridavani energie ukazovani enrgie a cim vetsi rychlost tim vetsi moznost na uhnuti pred 
