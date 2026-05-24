@@ -1,6 +1,8 @@
 #include <iostream>
 #include <random>
 using namespace std;
+string polepostava[16];
+string polehrdina[16];
 int zivotymax;
 int uroven;
 int randomcislo;
