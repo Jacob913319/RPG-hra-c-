@@ -47,22 +47,22 @@ int cenarychlost=100;
 void bojtri(){
 cout<<"________________________________________________________________________________________________________________________________\n\n";
 
-cout<<"         "<<jmenopostavy<<"                                                         "<<jmenonepritele[nepritel]<<"  a  "<<jmenonepriteledvojboj[nepritel]<<"  a  "<<jmenonepriteletrojboj[nepritel]<<"                        \n";
+cout<<"         "<<jmenopostavy<<"                                                                     "<<jmenonepritele[nepritel]<<"  a  "<<jmenonepriteledvojboj[nepritel]<<"  a  "<<jmenonepriteletrojboj[nepritel]<<"                        \n";
 cout<<"_________________________________________________________________________________________________________________________________\n";
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(0, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(0, 21)<<endl;                            
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(16, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(22, 21)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(31, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(43, 21)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(46, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(64, 21)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(61, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(85, 21)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(76, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(106, 21)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(91, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(127, 21)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(106, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(148, 21)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(121, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(169, 21)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(136, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(190, 21)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(151, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(211, 21)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(0, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(0, 21)<<endl;                            
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(16, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(22, 21)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(31, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(43, 21)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(46, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(64, 21)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(61, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(85, 21)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(76, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(106, 21)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(91, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(127, 21)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(106, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(148, 21)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(121, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(169, 21)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(136, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(190, 21)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(151, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(211, 21)<<endl;
 cout<<"_________________________________________________________________________________________________________________________________\n\n";
 
-cout<<"        "<<zivoty<<"                                                                 "<<polezivotynepritel[nepritel]<<"  a  "<<polezivotyprodvojboj[nepritel]<<"  a  "<<polezivotyprotrojboj[nepritel]<<"           \n";
+cout<<"          "<<zivoty<<"                                                                         "<<polezivotynepritel[nepritel]<<"  a  "<<polezivotyprodvojboj[nepritel]<<"  a  "<<polezivotyprotrojboj[nepritel]<<"           \n";
 cout<<"_________________________________________________________________________________________________________________________________\n";
 
     
@@ -71,22 +71,22 @@ cout<<"_________________________________________________________________________
 void bojdva(){
 cout<<"________________________________________________________________________________________________________________________________\n\n";
 
-cout<<"         "<<jmenopostavy<<"                                                         "<<jmenonepritele[nepritel]<<"  a  "<<jmenonepriteledvojboj[nepritel]<<"                        \n";
+cout<<"         "<<jmenopostavy<<"                                                                     "<<jmenonepritele[nepritel]<<"  a  "<<jmenonepriteledvojboj[nepritel]<<"                        \n";
 cout<<"_________________________________________________________________________________________________________________________________\n";
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(0, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(0, 15)<<endl;                            
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(16, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(16, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(31, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(31, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(46, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(46, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(61, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(61, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(76, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(76, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(91, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(91, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(106, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(106, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(121, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(121, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(136, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(136, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(151, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(151, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(0, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(0, 15)<<endl;                            
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(16, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(16, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(31, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(31, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(46, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(46, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(61, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(61, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(76, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(76, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(91, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(91, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(106, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(106, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(121, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(121, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(136, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(136, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(151, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(151, 15)<<endl;
 cout<<"_________________________________________________________________________________________________________________________________\n\n";
 
-cout<<"        "<<zivoty<<"                                                                 "<<polezivotynepritel[nepritel]<<"  a  "<<polezivotyprodvojboj[nepritel]<<"           \n";
+cout<<"          "<<zivoty<<"                                                                         "<<polezivotynepritel[nepritel]<<"  a  "<<polezivotyprodvojboj[nepritel]<<"           \n";
 cout<<"_________________________________________________________________________________________________________________________________\n";
 
     
@@ -95,22 +95,22 @@ cout<<"_________________________________________________________________________
 void boj(){
  cout<<"________________________________________________________________________________________________________________________________\n\n";
 
-cout<<"         "<<jmenopostavy<<"                                                         "<<jmenonepritele[nepritel]<<"                        \n";
+cout<<"         "<<jmenopostavy<<"                                                                      "<<jmenonepritele[nepritel]<<"                        \n";
 cout<<"_________________________________________________________________________________________________________________________________\n";
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(0, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(0, 15)<<endl;                            
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(16, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(16, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(31, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(31, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(46, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(46, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(61, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(61, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(76, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(76, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(91, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(91, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(106, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(106, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(121, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(121, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(136, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(136, 15)<<endl;
-                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(151, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(151, 15)<<endl;
+         cout<<"     ";             cout << postavyzoobrazeni[vyberobrazupostavy].substr(0, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(0, 15)<<endl;                            
+         cout<<"     ";               cout << postavyzoobrazeni[vyberobrazupostavy].substr(16, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(16, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(31, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(31, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(46, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(46, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(61, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(61, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(76, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(76, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(91, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(91, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(106, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(106, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(121, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(121, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(136, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(136, 15)<<endl;
+         cout<<"     ";                 cout << postavyzoobrazeni[vyberobrazupostavy].substr(151, 15);cout<<"                                                             ";cout<<nepratelezobrazeni[nepritel].substr(151, 15)<<endl;
 cout<<"_________________________________________________________________________________________________________________________________\n\n";
 
-cout<<"        "<<zivoty<<"                                                                 "<<polezivotynepritel[nepritel]<<"          \n";
+cout<<"          "<<zivoty<<"                                                                         "<<polezivotynepritel[nepritel]<<"          \n";
 cout<<"_________________________________________________________________________________________________________________________________\n";
 
     
@@ -404,10 +404,15 @@ if (volbaobchod==1){
     cout<<"Vytejte v arene.\n";
     cout<<"Budou taby probihat boje s neprately, pokud vyhrajete ziskate penize ale pokud prohrajete je pro vas game over\n";
     cout<<"a budete muset zacit hru odznova.\n";
+    cout<<"------------------------------------------------\n";
+    cout<<"------------------------------------------------\n";
     cout<<"Staty vaseho "<<nepritel+1<<" nepritele:\n";
     cout<<"Zivoty: "<<polezivotynepritel[nepritel]<<"\nUtok: "<<poleutoknepritel[nepritel]<<"\nSuper utok: "<<polesuperutoknepritel[nepritel]<<"\nOdmena: "<<poleodmenanepritel[nepritel]<<"\n";
-    cout<<"------------------------------------------------\n1";
+    cout<<"------------------------------------------------\n";
+    cout<<"------------------------------------------------\n";
     cout<<"Vase staty jsou:\nZivoty: "<<zivoty<<"\nUtok: "<<utok<<"\nBrneni: "<<brneni<<"\nRychlost: "<<rychlost<<"\nEnergie: "<<energie<<"\n"<<"Uroven: "<<uroven<<"\n";
+    cout<<"------------------------------------------------\n";
+    cout<<"------------------------------------------------\n";
     cout<<"Chcete spustit boj s nepritelem? 1-ano 2-ne";
     cin>>volbaobchod;
     if(volbaobchod==1&&nepritel!=4&&nepritel!=9&&nepritel!=15&&nepritel!=5&&nepritel!=10){
