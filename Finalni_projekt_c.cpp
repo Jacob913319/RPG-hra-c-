@@ -1,8 +1,10 @@
 #include <iostream>
 #include <random>
+#include <string>
 using namespace std;
-string polepostava[16];
-string polehrdina[16];
+int vyberobrazupostavy;
+string nepratelezobrazeni[16];
+string postavyzoobrazeni[4];
 int zivotymax;
 int uroven;
 int randomcislo;
@@ -24,9 +26,9 @@ int nahled;
 int vyber;
 int volbaobchod;
 int volbaobchodne=0; //pokud v shopu clovek zvoli ze nechce neco nakupovat bude to tam jako volbaobcodne =1 a nakonci vseho bude do while volbaobcod==1
-string jmenonepritele[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Upir","Zombik","Obr","Vampir","Drak","Minotaur","Mumie","Kobold","Ork","Troll","Ghoul"};
-string jmenonepriteledvojboj[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Papir","Zombik","Obr","Vampir","Drak","Piditoraur","Mumie","Kobold","Ork","Troll","Ghoul"};
-string jmenonepriteletrojboj[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Upir","Zombik","Obr","Vampir","Drak","Sinotaur","Mumie","Kobold","Ork","Troll","Ghoul"};
+string jmenonepritele[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Upir","Zombik","Obr","Vampir","Drak","Minotaur","Mumie","Kobold","Ork","Troll","Ascendrax"};
+string jmenonepriteledvojboj[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Papir","Zombik","Obr","Vampir","Drak","Piditoraur","Mumie","Kobold","Ork","Troll","Ascendrax"};
+string jmenonepriteletrojboj[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Upir","Zombik","Obr","Vampir","Drak","Sinotaur","Mumie","Kobold","Ork","Troll","Ascendrax"};
 int polezivotynepritel[16] = {100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250};
 int polezivotyprodvojboj[16] = {100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250};
 int polezivotyprotrojboj[16] = {100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250};
@@ -46,18 +48,18 @@ void bojtri(){
 cout<<"________________________________________________________________________________________________________________________________\n\n";
 
 cout<<"         "<<jmenopostavy<<"                                                         "<<jmenonepritele[nepritel]<<"  a  "<<jmenonepriteledvojboj[nepritel]<<"  a  "<<jmenonepriteletrojboj[nepritel]<<"                        \n";
-cout<<"_________________________________________________________________________________________________________________________________\n\n\n\n\n\n\n\n\n\n\n";
-
-
-
-
-
-
-
-
-
-
-
+cout<<"_________________________________________________________________________________________________________________________________\n";
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(0, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(0, 21)<<endl;                            
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(16, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(22, 21)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(31, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(43, 21)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(46, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(64, 21)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(61, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(85, 21)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(76, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(106, 21)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(91, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(127, 21)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(106, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(148, 21)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(121, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(169, 21)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(136, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(190, 21)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(151, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(211, 21)<<endl;
 cout<<"_________________________________________________________________________________________________________________________________\n\n";
 
 cout<<"        "<<zivoty<<"                                                                 "<<polezivotynepritel[nepritel]<<"  a  "<<polezivotyprodvojboj[nepritel]<<"  a  "<<polezivotyprotrojboj[nepritel]<<"           \n";
@@ -70,18 +72,18 @@ void bojdva(){
 cout<<"________________________________________________________________________________________________________________________________\n\n";
 
 cout<<"         "<<jmenopostavy<<"                                                         "<<jmenonepritele[nepritel]<<"  a  "<<jmenonepriteledvojboj[nepritel]<<"                        \n";
-cout<<"_________________________________________________________________________________________________________________________________\n\n\n\n\n\n\n\n\n\n\n";
-
-
-
-
-
-
-
-
-
-
-
+cout<<"_________________________________________________________________________________________________________________________________\n";
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(0, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(0, 15)<<endl;                            
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(16, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(16, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(31, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(31, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(46, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(46, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(61, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(61, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(76, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(76, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(91, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(91, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(106, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(106, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(121, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(121, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(136, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(136, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(151, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(151, 15)<<endl;
 cout<<"_________________________________________________________________________________________________________________________________\n\n";
 
 cout<<"        "<<zivoty<<"                                                                 "<<polezivotynepritel[nepritel]<<"  a  "<<polezivotyprodvojboj[nepritel]<<"           \n";
@@ -94,18 +96,18 @@ void boj(){
  cout<<"________________________________________________________________________________________________________________________________\n\n";
 
 cout<<"         "<<jmenopostavy<<"                                                         "<<jmenonepritele[nepritel]<<"                        \n";
-cout<<"_________________________________________________________________________________________________________________________________\n\n\n\n\n\n\n\n\n\n\n";
-
-
-
-
-
-
-
-
-
-
-
+cout<<"_________________________________________________________________________________________________________________________________\n";
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(0, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(0, 15)<<endl;                            
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(16, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(16, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(31, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(31, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(46, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(46, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(61, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(61, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(76, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(76, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(91, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(91, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(106, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(106, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(121, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(121, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(136, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(136, 15)<<endl;
+                     cout << postavyzoobrazeni[vyberobrazupostavy].substr(151, 15);cout<<"                                       ";cout<<nepratelezobrazeni[nepritel].substr(151, 15)<<endl;
 cout<<"_________________________________________________________________________________________________________________________________\n\n";
 
 cout<<"        "<<zivoty<<"                                                                 "<<polezivotynepritel[nepritel]<<"          \n";
@@ -187,6 +189,31 @@ random_device rd;
 mt19937 gen(rd());
 int main(){
     uniform_int_distribution<> sance(1, 100);
+    nepratelezobrazeni[0]="                                                                  .~.           (o~o)           )_(                                                                                                                  ";
+    nepratelezobrazeni[1]=R"(                                                    _             [_]            /|\             |             / \                                                                                               )";
+    nepratelezobrazeni[2]=R"(                                                   ###           (# #)          {###}           | |           ##|##                                                                                    )";
+    nepratelezobrazeni[3]=R"(                                                  /^^^\         (>* *<)         \vvv/           }|{           /   \                                                                                                   )";
+    //miniboss
+    nepratelezobrazeni[4]=R"(                                   _/|\_         ( o.o )        |=###=|         \ | /          _| |_         |_| |_|                                                                                       )";
+    //dvojboj
+    nepratelezobrazeni[5]=R"(                                                   /|\___        ( V| . |       |__|___|        | ||||        _| ||||                                                                                                   )";
+    nepratelezobrazeni[6]=R"(                                                  ,---.         (  ._.)        |  |T|          \_| /           | |                                                                                            )";
+    nepratelezobrazeni[7]=R"(                                    ___           /o o\         / === \       |  ||| |        \_| |_/        /|   |\                                                                                          )";
+    nepratelezobrazeni[8]=R"(                                                   /|\           ( V V)         |_|_|           | |           _| |_                                                                                                         )";
+    //miniboss
+    nepratelezobrazeni[9]=R"(                                  /\   /\       (  o_o  )       \ === /        |{||||}|       | |  | |       |_|  |_|                                                                                       )";
+    //trojboj ma 21na radek 
+    nepratelezobrazeni[10]=R"(                                                               /Y\    /y\    /Y\  (>o_o<)(>._.<)(>._.<)|=###=||=##=| |=##=|  \ | /  \|/    \|/    _|_|_  _|_    _|_                                                          )";
+    nepratelezobrazeni[11]=R"(                                                  .--.          (>~ <)         |~~~~|          \  /            \/                                                                                                           )";
+    nepratelezobrazeni[12]=R"(                                                   .-.           (o.o)           |^|            /|\                                                                                                                                                )";
+    nepratelezobrazeni[13]=R"(                                                   ___           /o O\         |=###=|         \ | /           |_|                                                                                                                                 )";
+    nepratelezobrazeni[14]=R"(                                                   ___           /@ @\         /=###=\        |  |  |        |__|__|                                                                                                                               )";
+    //boss
+    nepratelezobrazeni[15]=R"(   .-"""-.      /  * *  \     |  (o_o)  |    |  \___/  |     \ ||||| /      |_|||||_|     |  |||  |     /| .|.|. |\    |||||||||      |__|_|__|       |_| |_|                                                                                   )";
+    postavyzoobrazeni[0]=R"(                                                   [+]           (o_o)          ]|+|[          /| |\         |_| |_|                                                                                                                               )";
+    postavyzoobrazeni[1]=R"(                                                   /^\           (*.*)           )|(            /|\           (_|_)                                                                                                                                   )";
+    postavyzoobrazeni[2]=R"(                                                  _,,,_          (^-^)          /|o|\           | |           /| |\                                                                                                                           )";
+    postavyzoobrazeni[3]=R"(                                                  .,o,.          (>.<)          |}|{|           \|/           _/|\_                                                                                                                    )";
     do{
     do{
     cout<<"Na vyber mate 4 postavy:\n1-Rytir\n2-Carodej\n3-Lovec\n4-Assasin";
@@ -245,6 +272,7 @@ int main(){
     }
     cout<<"\nChcete tuto postavu pouzit? 1-ano 2-ne";
     cin>>vyber;
+    vyberobrazupostavy=nahled-1;
     }while(vyber!=1);
     if(nahled==1) {
         jmenopostavy="Rytir";
@@ -378,13 +406,15 @@ if (volbaobchod==1){
     cout<<"a budete muset zacit hru odznova.\n";
     cout<<"Staty vaseho "<<nepritel+1<<" nepritele:\n";
     cout<<"Zivoty: "<<polezivotynepritel[nepritel]<<"\nUtok: "<<poleutoknepritel[nepritel]<<"\nSuper utok: "<<polesuperutoknepritel[nepritel]<<"\nOdmena: "<<poleodmenanepritel[nepritel]<<"\n";
-    cout<<"Chcete spustit boj s nepritelem? 1-ano 2-ne";
+    cout<<"------------------------------------------------\n1";
     cout<<"Vase staty jsou:\nZivoty: "<<zivoty<<"\nUtok: "<<utok<<"\nBrneni: "<<brneni<<"\nRychlost: "<<rychlost<<"\nEnergie: "<<energie<<"\n"<<"Uroven: "<<uroven<<"\n";
+    cout<<"Chcete spustit boj s nepritelem? 1-ano 2-ne";
     cin>>volbaobchod;
     if(volbaobchod==1&&nepritel!=4&&nepritel!=9&&nepritel!=15&&nepritel!=5&&nepritel!=10){
         cout<<"Boj se spustil.\n";
         do{
         boj();
+        cout<<"vase energie je: "<<energie<<"\n";  
         cout<<"Zadejte co chcete udelat:\n1-Basic utok-1energie\n2-Super utok-3energie\n3-Utek\n";
         cin>>volbaobchod;
         if(volbaobchod==1&&energie >=1){
@@ -397,8 +427,7 @@ if (volbaobchod==1){
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
                 }else if(randomcislo>rychlost){
                     cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    zivoty=zivoty-poleutoknepritel[nepritel];
-                    energie=energie-1;                                   //udelat aby mi to pridv     
+                    zivoty=zivoty-poleutoknepritel[nepritel];                                 //udelat aby mi to pridv     
                     if(zivoty<=0){
                         cout<<"\nProhrali jste a je konec hry\n";
                         return 0;
@@ -412,17 +441,16 @@ if (volbaobchod==1){
 
 
         }else if(volbaobchod==2&&energie>=3){
-            energie=energie+2;
             cout<<"Zautocili jste super utokem a udelali jste "<<superutok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-superutok;
+            energie=energie-3;
             if(polezivotynepritel[nepritel]>0){
                 randomcislo=sance(gen);
                 if(randomcislo<=rychlost){
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
                 }else if(randomcislo>rychlost){
                     cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    zivoty=zivoty-poleutoknepritel[nepritel];
-                    energie=energie-3;                                         
+                    zivoty=zivoty-poleutoknepritel[nepritel];                         
                     if(zivoty<=0){
                         cout<<"Prohrali jste a je konec hry\n";
                         return 0;
@@ -441,7 +469,7 @@ if (volbaobchod==1){
         if(volbaobchod!=3){
             zivoty=zivotymax;
             nepritel=nepritel+1;
-            energie=energie+1;
+
         }else if (volbaobchod==3){
             zivoty=zivotymax;
             polezivotynepritel[nepritel]=polezivotynepritelmax[nepritel];
@@ -459,20 +487,20 @@ if (volbaobchod==1){
         }
         do{
         boj();
+        cout<<"vase energie je: "<<energie<<"\n";
         cout<<"Zadejte co chcete udelat:\n1-Basic utok-1energie\n2-Super utok-3energie\n3-Utek\n";
         cin>>volbaobchod;
         if(volbaobchod==1&&energie >=1){
-            energie=energie+1;
             cout<<"Zautocili jste basic utokem a udelali jste "<<utok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-utok;
+            energie=energie-1;
             if(polezivotynepritel[nepritel]>0){
                 randomcislo=sance(gen);
                 if(randomcislo<=rychlost){
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
                 }else if(randomcislo>rychlost){
                     cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    zivoty=zivoty-poleutoknepritel[nepritel];
-                    energie=energie-1;                                         
+                    zivoty=zivoty-poleutoknepritel[nepritel];                                       
                     if(zivoty<=0){
                         cout<<"Prohrali jste a je konec hry\n";
                         return 0;
@@ -484,17 +512,16 @@ if (volbaobchod==1){
             }
 
         }else if(volbaobchod==2&&energie>=3){
-            energie=energie+2;
             cout<<"Zautocili jste super utokem a udelali jste "<<superutok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-superutok;
+            energie=energie-3;
             if(polezivotynepritel[nepritel]>0){
                 randomcislo=sance(gen);
                 if(randomcislo<=rychlost){
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
                 }else if(randomcislo>rychlost){
                      cout<<"Nepritel vam zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                     zivoty=zivoty-poleutoknepritel[nepritel];
-                    energie=energie-3;                                         
+                     zivoty=zivoty-poleutoknepritel[nepritel];                                
                     if(zivoty<=0){
                         cout<<"Prohrali jste a je konec hry\n";
                         return 0;
@@ -513,7 +540,6 @@ if (volbaobchod==1){
         if(volbaobchod!=3){
             zivoty=zivotymax;
             nepritel=nepritel+1;
-            energie=energie+1;
         }else if (volbaobchod==3){
             zivoty=zivotymax;
             polezivotynepritel[nepritel]=polezivotynepritelmax[nepritel];
@@ -524,10 +550,10 @@ if (volbaobchod==1){
         cout<<"Boj se spustil.\n";
         do{
         bojdva();
+        cout<<"vase energie je: "<<energie<<"\n";
         cout<<"Zadejte co chcete udelat:\n1-Basic utok-1energie\n2-Super utok-3energie\n3-Utek\n";
         cin>>volbaobchod;
         if(volbaobchod==1&&energie >=1){
-            energie=energie+1;
             cout<<"na jakeho nepritele chcete zautocit: \n1-"<<jmenonepritele[nepritel]<<" 2-"<<jmenonepriteledvojboj[nepritel]<<"\n";
             cin>>volbaobchod;
             cout<<"Zautocili jste basic utokem a udelali jste "<<utok<<" skody\n";
@@ -568,7 +594,6 @@ if (volbaobchod==1){
 
 
         }else if(volbaobchod==2&&energie>=3){
-            energie=energie+2;
             cout<<"Zautocili jste super utokem a udelali jste "<<superutok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-superutok;
             polezivotyprodvojboj[nepritel]=polezivotyprodvojboj[nepritel]-superutok;
@@ -610,7 +635,6 @@ if (volbaobchod==1){
         if(volbaobchod!=3){
             zivoty=zivotymax;
             nepritel=nepritel+1;
-            energie=energie+1;
         }else if (volbaobchod==3){
             zivoty=zivotymax;
             polezivotynepritel[nepritel]=polezivotynepritelmax[nepritel];
@@ -620,10 +644,10 @@ if (volbaobchod==1){
         cout<<"Boj se spustil.\n";
         do{
         bojtri();
+        cout<<"vase energie je: "<<energie<<"\n";
         cout<<"Zadejte co chcete udelat:\n1-Basic utok-1energie\n2-Super utok-3energie\n3-Utek\n";
         cin>>volbaobchod;
         if(volbaobchod==1&&energie >=1){
-            energie=energie+1;
             cout<<"na jakeho nepritele chcete zautocit: \n1-"<<jmenonepritele[nepritel]<<" 2-"<<jmenonepriteledvojboj[nepritel]<<" 3-"<<jmenonepriteletrojboj[nepritel]<<"\n";
             cin>>volbaobchod;
             cout<<"Zautocili jste basic utokem a udelali jste "<<utok<<" skody\n";
@@ -677,8 +701,7 @@ if (volbaobchod==1){
             }
 
 
-        }else if(volbaobchod==2&&energie>=3){
-            energie=energie+2;
+        }else if(volbaobchod==2&&energie>=3){;
             cout<<"Zautocili jste super utokem a udelali jste "<<superutok<<" skody\n";
             polezivotynepritel[nepritel]=polezivotynepritel[nepritel]-superutok;
             polezivotyprodvojboj[nepritel]=polezivotyprodvojboj[nepritel]-superutok;
@@ -733,7 +756,6 @@ if (volbaobchod==1){
         if(volbaobchod!=3){
             zivoty=zivotymax;
             nepritel=nepritel+1;
-            energie=energie+1;
         }else if (volbaobchod==3){
             zivoty=zivotymax;
             polezivotynepritel[nepritel]=polezivotynepritelmax[nepritel];
