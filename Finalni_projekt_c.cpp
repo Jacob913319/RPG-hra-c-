@@ -12,8 +12,8 @@ int uroven;
 int randomcislo;
 int dvojbojvyberutoku;
 int nepritel=0;
-int energie=25;
-int energiemax=25;
+int energie=16;
+int energiemax=16;
 int superutok;
 int brneniuziti=2;
 int zivoty;
@@ -36,7 +36,7 @@ int polezivotynepritel[16] = {400,450,500,550,600,650,700,750,800,850,900,950,10
 int polezivotyprodvojboj[16] = {400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1200};
 int polezivotyprotrojboj[16] = {400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1200};
 int polezivotynepritelmax[16] = {400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1200};
-int poleutoknepritel[16] = {10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85};
+int poleutoknepritel[16] = {10,15,20,25,25,35,40,45,50,55,60,65,70,75,80,85};
 int polesuperutoknepritel[16] = {20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170};
 int poleodmenanepritel[16] = {110,150,190,230,270,310,350,390,430,470,510,550,590,630,670,710};
 int levelmece=0;
@@ -224,7 +224,7 @@ int main(){
     if(nahled==1) {
         cout<<"HP:150";
         cout<<"\nBasic utok:35";
-        cout<<"\nEnergie:25";
+        cout<<"\nEnergie:16";
         cout<<"\nRychlost:5";
         cout<<"\nSuper utok:36";
         zivotymax=150;
@@ -236,7 +236,7 @@ int main(){
     }else if(nahled==2){
         cout<<"HP:80";
         cout<<"\nBasic utok:56";
-        cout<<"\nEnergie:25";
+        cout<<"\nEnergie:16";
         cout<<"\nRychlost:10";
         cout<<"\nSuper utok:64";
         zivotymax=80;
@@ -248,7 +248,7 @@ int main(){
     }else if(nahled==3){
         cout<<"HP:110";
         cout<<"\nUtok:41";
-        cout<<"\nEnergie:25";
+        cout<<"\nEnergie:16";
         cout<<"\nRychlost:15";
         cout<<"\nSuper utok:60";
         zivoty=110;
@@ -260,7 +260,7 @@ int main(){
     }else if(nahled==4){
         cout<<"HP:90";
         cout<<"\nUtok:65";
-        cout<<"\nEnergie:25";
+        cout<<"\nEnergie:16";
         cout<<"\nRychlost:25";
         cout<<"\nSuper utok:110";
         zivoty=90;
