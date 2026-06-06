@@ -189,7 +189,7 @@ random_device rd;
 mt19937 gen(rd());//toto je pro generování random čísel
 int main(){
     uniform_int_distribution<> sance(1, 100);//toto je také pro generování random čísel
-    //uniform_int_distribution<> sance(1, );
+    uniform_int_distribution<> boss(5, 20);
     nepratelezobrazeni[0]="                                                                  .~.           (o~o)           )_(                                                                                                                  ";
     nepratelezobrazeni[1]=R"(                                                    _             [_]            /|\             |             / \                                                                                               )";
     nepratelezobrazeni[2]=R"(                                                   ###           (# #)          {###}           | |           ##|##                                                                                    )";
@@ -859,15 +859,20 @@ if (volbaobchod==1){
         boj();
         randomcislo=sance(gen);
         if(randomcislo<=rychlost){
-            bojtri();
+            boj();
             this_thread::sleep_for(chrono::milliseconds(500));
             cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
         }else if(randomcislo>rychlost){
-            bojtri();
+            boj();
             this_thread::sleep_for(chrono::milliseconds(500));
-            cout<<"nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
+            int utokboss=0;
+            utokboss=0;
+            for(int i=0;i<uroven;i++){
+                utokboss=utokboss+boss(gen);
+            }
+            cout<<"nepritel na vas zautocil a udelal vam "<<utokboss<<" skody\n";
             this_thread::sleep_for(chrono::milliseconds(1000));
-            zivoty=zivoty-poleutoknepritel[nepritel];
+            zivoty=zivoty-utokboss;
         }
         do{
         boj();
@@ -882,15 +887,19 @@ if (volbaobchod==1){
             if(polezivotynepritel[nepritel]>0){
                 randomcislo=sance(gen);
                 if(randomcislo<=rychlost){
-                    bojtri();
+                    boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
                 }else if(randomcislo>rychlost){
-                    bojtri();
+                    boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
-                    cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
+                    int utokboss=0;
+                    for(int i=0;i<uroven;i++){
+                        utokboss=utokboss+boss(gen);
+                    }
+                    cout<<"Nepritel na vas zautocil a udelal vam "<<utokboss<<" skody\n";
                     this_thread::sleep_for(chrono::milliseconds(1000));
-                    zivoty=zivoty-poleutoknepritel[nepritel];                                       
+                    zivoty=zivoty-utokboss;                                       
                     if(zivoty<=0){
                         cout<<"Prohrali jste a je konec hry\n";
                         return 0;
@@ -909,15 +918,19 @@ if (volbaobchod==1){
             if(polezivotynepritel[nepritel]>0){
                 randomcislo=sance(gen);
                 if(randomcislo<=rychlost){
-                    bojtri();
+                    boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
                 }else if(randomcislo>rychlost){
-                    bojtri();
+                    boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
-                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                     this_thread::sleep_for(chrono::milliseconds(1000));
-                     zivoty=zivoty-poleutoknepritel[nepritel];                                
+                    int utokboss=0;
+                    for(int i=0;i<uroven;i++){
+                        utokboss=utokboss+boss(gen);
+                    }
+                    cout<<"Nepritel na vas zautocil a udelal vam "<<utokboss<<" skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    zivoty=zivoty-utokboss;
                     if(zivoty<=0){
                         cout<<"Prohrali jste a je konec hry\n";
                         return 0;
