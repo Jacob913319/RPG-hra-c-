@@ -32,11 +32,11 @@ int volbaobchodne=0; //pokud v shopu clovek zvoli ze nechce neco nakupovat bude 
 string jmenonepritele[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Upir","Zombik","Obr","Vampir","Drak","Minotaur","Mumie","Kobold","Ork","Troll","Ascendrax"};
 string jmenonepriteledvojboj[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Papir","Zombik","Obr","Vampir","Drak","Piditoraur","Mumie","Kobold","Ork","Troll","Ascendrax"};
 string jmenonepriteletrojboj[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Upir","Zombik","Obr","Vampir","Drak","Sinotaur","Mumie","Kobold","Ork","Troll","Ascendrax"};
-int polezivotynepritel[16] = {400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1200};
-int polezivotyprodvojboj[16] = {400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1200};
-int polezivotyprotrojboj[16] = {400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1200};
-int polezivotynepritelmax[16] = {400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1200};
-int poleutoknepritel[16] = {10,15,20,25,25,35,40,45,50,55,60,65,70,75,80,85};
+int polezivotynepritel[16] = {400,450,500,550,550,600,650,660,710,760,810,860,910,960,1010,987};
+int polezivotyprodvojboj[16] = {400,450,500,550,550,600,650,660,710,760,810,860,910,960,1010,987};
+int polezivotyprotrojboj[16] = {400,450,500,550,550,600,650,660,710,760,810,860,910,960,1010,987};
+int polezivotynepritelmax[16] = {400,450,500,550,550,600,650,660,710,760,810,860,910,960,1010,987};
+int poleutoknepritel[16] = {10,15,20,23,20,23,27,31,35,39,43,47,51,55,59,63};
 int polesuperutoknepritel[16] = {20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170};
 int poleodmenanepritel[16] = {110,150,190,230,270,310,350,390,430,470,510,550,590,630,670,710};
 int levelmece=0;
@@ -47,6 +47,56 @@ int cenazivoty=100;
 int cenautok=100;
 int cenarychlost=100;
 int cenaenergie=100;
+void gameover(){
+   cout<<R"(                                                                                )"<<endl;
+     cout<<R"(                                                                                )"<<endl;
+cout<<R"(    ####   #####  ## ##  #####    #####  #   #  #####  #####                   )"<<endl;
+cout<<R"(   #       #   #  ## ##  #        #   #  #   #  #      #   #                  )"<<endl;
+cout<<R"(   # ###   #####  # # #  ###      #   #  #   #  ###    ####                   )"<<endl;
+cout<<R"(   #   #   #   #  #   #  #        #   #   # #   #      # #                    )"<<endl;
+cout<<R"(    ####   #   #  #   #  #####    #####    #    #####  #   #                   )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(                            /~\                                                 )"<<endl;
+cout<<R"(                           | RIP |                                              )"<<endl;
+cout<<R"(                           |     |                                              )"<<endl;
+cout<<R"(                         __|_____|__                                            )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(            Padli jste v boji... Vase dobrodruzstvi zde konci.                 )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+}
+void gamewon(){
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(       #         #  ###  ##    #  ##    #  #####  ####                          )"<<endl;
+cout<<R"(       #         #   #   # #   #  # #   #  #      #   #                         )"<<endl;
+cout<<R"(        #   #   #    #   #  #  #  #  #  #  ###    ####                          )"<<endl;
+cout<<R"(         # # # #     #   #   # #  #   # #  #      # #                           )"<<endl;
+cout<<R"(          #   #     ###  #    ##  #    ##  #####  #  #                          )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(    ####   #####  ## ##  #####   #   # #   #  #####  ##    #                    )"<<endl;
+cout<<R"(   #       #   #  ## ##  #       #   # #   #  #   #  # #   #                    )"<<endl;
+cout<<R"(   # ###   #####  # # #  ###      #   #   #   #   #  #  #  #                    )"<<endl;
+cout<<R"(   #   #   #   #  #   #  #         # # # #    #   #  #   # #                    )"<<endl;
+cout<<R"(    ####   #   #  #   #  #####      #   #     #####  #    ##                    )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(              *        *        *        *        *        *                    )"<<endl;
+cout<<R"(           \o/ \o/ \o/ \o/ \o/ \o/ \o/ \o/ \o/ \o/ \o/ \o/                      )"<<endl;
+cout<<R"(            |   |   |   |   |   |   |   |   |   |   |   |                       )"<<endl;
+cout<<R"(           / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \                      )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(          Gratulujeme! Porazili jste vsechny nepratele a zachranili svet!       )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(                                                                                )"<<endl;
+cout<<R"(                                                                                )"<<endl;                            
+}
 void bojtri(){
 cout<<"________________________________________________________________________________________________________________________________\n\n";
 
@@ -168,7 +218,7 @@ cout<<R"(|                                                                      
 cout<<R"(|___________________________________________________________________________________________________________________|)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
-cout<<R"(|    3    ENERGIE- - -)"<<energie<<R"(---->)"<<energie+5<<R"(- - - - - - - - - - - -cena:)"<<cenaenergie<<R"(                                    |)"<<endl;
+cout<<R"(|    3    ENERGIE- - -)"<<energie<<R"(---->)"<<energie+3<<R"(- - - - - - - - - - - -cena:)"<<cenaenergie<<R"(                                    |)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 cout<<R"(|___________________________________________________________________________________________________________________|)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
@@ -188,6 +238,13 @@ cout<<R"(|______________________________________________________________________
 random_device rd;
 mt19937 gen(rd());//toto je pro generování random čísel
 int main(){
+    nepritel=nepritel+6;
+    penize=penize+680+270+310;
+    cout<<"Vitejte ve hre!\nVteto hre budete se svym hrdinou bojovat proti nepratelum.\nCeka vas 16 nepratelz toho jsou 2 minibossove, jeden boj s dvema neprateli a jeden boj proti 3 nepratelum.\n";
+    cout<<"Nakonec se utkate s bossem Ascendraxem. Kazdy nepritel bude silnejsi nez ten predchozi \na dostanete za nej i lepsi odmenu.";
+    cout<<"vas hrdina bude mit 4 atributy: zivoty, utok, energie a rychlost.\nKazdy atribut muzete vylepsovat a tim se vam zvysi uroven a budete mit lepsi sanci na vitezstvi.\n";
+    cout<<"rychlos znaci jakou mate sanci na to ze se vyhnete utoku nepratele, enrgie se pouziva pro utok a superutok,\nzivoty jsou vase zdraví a utok je kolik poskozeni udelate neprateli.\n";
+    cout<<"po kazdem boji budete moci nastivit obchody s vylepsenim a nakoupit lepsi zbran nebo vylepsit sve atributy.\n";
     uniform_int_distribution<> sance(1, 100);//toto je také pro generování random čísel
     uniform_int_distribution<> boss(5, 20);
     nepratelezobrazeni[0]="                                                                  .~.           (o~o)           )_(                                                                                                                  ";
@@ -222,52 +279,52 @@ int main(){
     cin >> nahled;
     }while(nahled!=1&&nahled!=2&&nahled!=3&&nahled!=4);
     if(nahled==1) {
-        cout<<"HP:150";
+        cout<<"HP:160";
         cout<<"\nBasic utok:35";
-        cout<<"\nEnergie:16";
+        cout<<"\nEnergie:18";
         cout<<"\nRychlost:5";
         cout<<"\nSuper utok:36";
-        zivotymax=150;
-        zivoty=150;
+        zivotymax=160;
+        zivoty=160;
         utok=35;
         superutok=2*utok;
-        brneni=15;
+        energie=18;
         rychlost=5;
     }else if(nahled==2){
-        cout<<"HP:80";
+        cout<<"HP:100";
         cout<<"\nBasic utok:56";
-        cout<<"\nEnergie:16";
+        cout<<"\nEnergie:18";
         cout<<"\nRychlost:10";
         cout<<"\nSuper utok:64";
-        zivotymax=80;
-        zivoty=80;
+        zivotymax=100;
+        zivoty=100;
         utok=56;
         superutok=2*utok;
-        brneni=2;
+        energie=18;
         rychlost=10;
     }else if(nahled==3){
-        cout<<"HP:110";
+        cout<<"HP:125";
         cout<<"\nUtok:41";
-        cout<<"\nEnergie:16";
+        cout<<"\nEnergie:18";
         cout<<"\nRychlost:15";
         cout<<"\nSuper utok:60";
-        zivoty=110;
-        zivotymax=110;
+        zivoty=125;
+        zivotymax=125;
         utok=41;
         superutok=2*utok;
-        brneni=7;
+        energie=18;
         rychlost=15;
     }else if(nahled==4){
-        cout<<"HP:90";
+        cout<<"HP:110";
         cout<<"\nUtok:65";
-        cout<<"\nEnergie:16";
+        cout<<"\nEnergie:18";
         cout<<"\nRychlost:25";
         cout<<"\nSuper utok:110";
-        zivoty=90;
-        zivotymax=90;   
+        zivoty=110;
+        zivotymax=110;   
         utok=57;
         superutok=2*utok;
-        brneni=4;
+        energie=18;
         rychlost=25;
 
     }
@@ -367,7 +424,7 @@ if (volbaobchod==1){
         superutok=2*utok;
     }else if(volbaobchod==3&&penize>=cenaenergie){
         cout<<"Koupili jste vylepseni energie";
-        energiemax=energiemax+5;
+        energiemax=energiemax+3;
         energie=energiemax;
         penize=penize-cenaenergie;
         cenaenergie=cenaenergie+100;
@@ -416,16 +473,22 @@ if (volbaobchod==1){
                     boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(500));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];                                 //udelat aby mi to pridv     
                     if(zivoty<=0){
-                        cout<<"\nProhrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
                         return 0;
                     }
+                        
+                    
                 }
             
             }else if(polezivotynepritel[nepritel]<=0){
@@ -446,14 +509,18 @@ if (volbaobchod==1){
                     boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(500));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];                         
                     if(zivoty<=0){
-                        cout<<"Prohrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
                         return 0;
                     }
                 }
@@ -478,7 +545,7 @@ if (volbaobchod==1){
             polezivotynepritel[nepritel]=polezivotynepritelmax[nepritel];
             energie=energiemax;
         }
-    }else if(volbaobchod==1&&nepritel==4||nepritel==9){
+    }else if(volbaobchod==1&&(nepritel==4||nepritel==9)){
         cout<<"boj se spustil.\n";
         this_thread::sleep_for(chrono::milliseconds(500));
         cout<<"Vas protivník je mini-boss nebo boss tim padem zacina on a je o neco silnejsi nez ostatni nepratele\n";
@@ -489,11 +556,12 @@ if (volbaobchod==1){
             boj();
             this_thread::sleep_for(chrono::milliseconds(500));
             cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+            this_thread::sleep_for(chrono::milliseconds(1500));
         }else if(randomcislo>rychlost){
         boj();
         this_thread::sleep_for(chrono::milliseconds(500));
         cout<<"nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-        this_thread::sleep_for(chrono::milliseconds(500));
+        this_thread::sleep_for(chrono::milliseconds(1500));
         zivoty=zivoty-poleutoknepritel[nepritel];
         }
         do{
@@ -515,14 +583,19 @@ if (volbaobchod==1){
                     boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(500));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];                                       
                     if(zivoty<=0){
-                        cout<<"Prohrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -543,6 +616,7 @@ if (volbaobchod==1){
                     boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
@@ -550,7 +624,11 @@ if (volbaobchod==1){
                     this_thread::sleep_for(chrono::milliseconds(500));
                      zivoty=zivoty-poleutoknepritel[nepritel];                                
                     if(zivoty<=0){
-                        cout<<"Prohrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -585,8 +663,10 @@ if (volbaobchod==1){
         cout<<"Zadejte co chcete udelat:\n1-Basic utok-1energie\n2-Super utok-3energie\n3-Utek\n";
         cin>>volbaobchod;
         if(volbaobchod==1&&energie >=1){
+            do{
             cout<<"na jakeho nepritele chcete zautocit: \n1-"<<jmenonepritele[nepritel]<<" 2-"<<jmenonepriteledvojboj[nepritel]<<"\n";
             cin>>volbaobchod;
+            }while(volbaobchod!=1&&volbaobchod!=2);
             cout<<"Zautocili jste basic utokem a udelali jste "<<utok<<" skody\n";
             this_thread::sleep_for(chrono::milliseconds(500));
             energie=energie-1;
@@ -601,14 +681,19 @@ if (volbaobchod==1){
                     bojdva();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     bojdva();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];                                    //udelat aby mi to pridv     
                     if(zivoty<=0){
-                        cout<<"\nProhrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -618,14 +703,19 @@ if (volbaobchod==1){
                     bojdva();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     bojdva();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];
                     if(zivoty<=0){
-                        cout<<"\nProhrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -647,15 +737,20 @@ if (volbaobchod==1){
                 if(randomcislo<=rychlost){
                     bojdva();
                     this_thread::sleep_for(chrono::milliseconds(500));
-                    cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";   
+                    cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n"; 
+                    this_thread::sleep_for(chrono::milliseconds(1500));  
                 }else if(randomcislo>rychlost){
                     bojdva();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];                                         
                     if(zivoty<=0){
-                        cout<<"Prohrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -665,14 +760,19 @@ if (volbaobchod==1){
                     bojdva();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     bojdva();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];
                     if(zivoty<=0){
-                        cout<<"Prohrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -706,8 +806,10 @@ if (volbaobchod==1){
         cout<<"Zadejte co chcete udelat:\n1-Basic utok-1energie\n2-Super utok-3energie\n3-Utek\n";
         cin>>volbaobchod;
         if(volbaobchod==1&&energie >=1){
+            do{
             cout<<"na jakeho nepritele chcete zautocit: \n1-"<<jmenonepritele[nepritel]<<" 2-"<<jmenonepriteledvojboj[nepritel]<<" 3-"<<jmenonepriteletrojboj[nepritel]<<"\n";
             cin>>volbaobchod;
+            }while(volbaobchod!=1&&volbaobchod!=2&&volbaobchod!=3);
             cout<<"Zautocili jste basic utokem a udelali jste "<<utok<<" skody\n";
             this_thread::sleep_for(chrono::milliseconds(500));
             energie=energie-1;
@@ -724,14 +826,19 @@ if (volbaobchod==1){
                     bojtri();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     bojtri();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];                                     
                     if(zivoty<=0){
-                        cout<<"\nProhrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -741,14 +848,19 @@ if (volbaobchod==1){
                     bojtri();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     bojtri();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];
                     if(zivoty<=0){
-                        cout<<"\nProhrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -758,14 +870,19 @@ if (volbaobchod==1){
                     bojtri();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     bojtri();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];
                     if(zivoty<=0){
-                        cout<<"\nProhrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -788,14 +905,19 @@ if (volbaobchod==1){
                     bojtri();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";   
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     bojtri();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];                                         
                     if(zivoty<=0){
-                        cout<<"Prohrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -805,14 +927,19 @@ if (volbaobchod==1){
                     bojtri();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     bojtri();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];
                     if(zivoty<=0){
-                        cout<<"Prohrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -822,14 +949,19 @@ if (volbaobchod==1){
                     bojtri();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     bojtri();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel na vas zautocil a udelal vam "<<poleutoknepritel[nepritel]<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-poleutoknepritel[nepritel];
                     if(zivoty<=0){
-                        cout<<"Prohrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -862,6 +994,7 @@ if (volbaobchod==1){
             boj();
             this_thread::sleep_for(chrono::milliseconds(500));
             cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+            this_thread::sleep_for(chrono::milliseconds(1500));
         }else if(randomcislo>rychlost){
             boj();
             this_thread::sleep_for(chrono::milliseconds(500));
@@ -871,7 +1004,7 @@ if (volbaobchod==1){
                 utokboss=utokboss+boss(gen);
             }
             cout<<"nepritel na vas zautocil a udelal vam "<<utokboss<<" skody\n";
-            this_thread::sleep_for(chrono::milliseconds(1000));
+            this_thread::sleep_for(chrono::milliseconds(1500));
             zivoty=zivoty-utokboss;
         }
         do{
@@ -890,6 +1023,7 @@ if (volbaobchod==1){
                     boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
@@ -898,10 +1032,14 @@ if (volbaobchod==1){
                         utokboss=utokboss+boss(gen);
                     }
                     cout<<"Nepritel na vas zautocil a udelal vam "<<utokboss<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-utokboss;                                       
                     if(zivoty<=0){
-                        cout<<"Prohrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -921,6 +1059,7 @@ if (volbaobchod==1){
                     boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
                     cout<<"Nepritel zautocil ale minul vas a neudelal vam zadne skody\n";
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                 }else if(randomcislo>rychlost){
                     boj();
                     this_thread::sleep_for(chrono::milliseconds(500));
@@ -929,10 +1068,14 @@ if (volbaobchod==1){
                         utokboss=utokboss+boss(gen);
                     }
                     cout<<"Nepritel na vas zautocil a udelal vam "<<utokboss<<" skody\n";
-                    this_thread::sleep_for(chrono::milliseconds(1000));
+                    this_thread::sleep_for(chrono::milliseconds(1500));
                     zivoty=zivoty-utokboss;
                     if(zivoty<=0){
-                        cout<<"Prohrali jste a je konec hry\n";
+                        gameover();
+                        return 0;
+                    }else if(zivoty>0&&energie<=0){
+                        cout<<"Umreli ste na vycerpani\n";
+                        gameover();
                         return 0;
                     }
                 }
@@ -963,12 +1106,7 @@ if (volbaobchod==1){
     
 }
 }while(zivoty>0&&nepritel<16);
-cout<<"Gratulujeme, porazili jste vsechny nepratele a vyhrali jste hru\n";
+cout<<"\n\nGratulujeme, porazili jste vsechny nepratele a vyhrali jste hru\n";
+gamewon();
 }
-
-        //pridavani energie ukazovani enrgie a cim vetsi rychlost tim vetsi moznost na uhnuti pred 
-        //nepritelem a kdyz tam budou dva neprateletak to dodelat a vymislet k cemu bude brneni a grafiku
-        //kdyz tam budou dva tak udelat dalsi if k tomu jak jsou bossove a mini bosove tak za ne udelak kdyz tam bude treba
-        //nepritel 5 a nebo 10 tak tam udelat misto jednich zivotu dva a super utok bude pridavat oboum a budu si
-        //muset vybrat na jakeho chci utocit a v stringu jen misto jendoho jmena tam dam dva hned za sebe
 
