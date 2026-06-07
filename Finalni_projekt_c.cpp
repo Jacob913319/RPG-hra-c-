@@ -17,26 +17,26 @@ int energiemax=16;
 int superutok;
 int brneniuziti=2;
 int zivoty;
-int pomocnapromena1=3;
-int pomocnapromena2=5;
-int pomocnapromena3=10;
-int pomocnapromena4=15;
-int pomocnapromena5=20;
+int pomocnapromena1=7;
+int pomocnapromena2=14;
+int pomocnapromena3=21;
+int pomocnapromena4=28;
+int pomocnapromena5=35;
 int penize=500;
 string jmenopostavy;
 string zbran;
 int nahled;
 int vyber;
 int volbaobchod;
-int volbaobchodne=0; //pokud v shopu clovek zvoli ze nechce neco nakupovat bude to tam jako volbaobcodne =1 a nakonci vseho bude do while volbaobcod==1
+int volbaobchodne=0; 
 string jmenonepritele[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Upir","Zombik","Obr","Vampir","Drak","Minotaur","Mumie","Kobold","Ork","Troll","Ascendrax"};
 string jmenonepriteledvojboj[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Papir","Zombik","Obr","Vampir","Drak","Piditoraur","Mumie","Kobold","Ork","Troll","Ascendrax"};
 string jmenonepriteletrojboj[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Upir","Zombik","Obr","Vampir","Drak","Sinotaur","Mumie","Kobold","Ork","Troll","Ascendrax"};
-int polezivotynepritel[16] = {400,450,500,550,550,600,650,660,710,760,810,860,910,960,1010,987};
-int polezivotyprodvojboj[16] = {400,450,500,550,550,600,650,660,710,760,810,860,910,960,1010,987};
-int polezivotyprotrojboj[16] = {400,450,500,550,550,600,650,660,710,760,810,860,910,960,1010,987};
-int polezivotynepritelmax[16] = {400,450,500,550,550,600,650,660,710,760,810,860,910,960,1010,987};
-int poleutoknepritel[16] = {10,15,20,23,20,23,27,31,35,39,43,47,51,55,59,63};
+int polezivotynepritel[16] = {400,450,500,550,550,600,650,660,705,705,750,795,810,830,850,1000};
+int polezivotyprodvojboj[16] = {400,450,500,550,550,600,650,660,705,705,750,795,810,830,850,1000};
+int polezivotyprotrojboj[16] = {400,450,500,550,550,600,650,660,705,705,750,795,810,830,850,1000};
+int polezivotynepritelmax[16] = {400,450,500,550,550,600,650,660,705,705,750,795,810,830,850,1000};
+int poleutoknepritel[16] = {10,15,20,23,20,23,27,31,35,39,43,47,48,50,53,57};
 int polesuperutoknepritel[16] = {20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170};
 int poleodmenanepritel[16] = {110,150,190,230,270,310,350,390,430,470,510,550,590,630,670,710};
 int levelmece=0;
@@ -45,7 +45,7 @@ int brneni;
 int rychlost;
 int cenazivoty=100;
 int cenautok=100;
-int cenarychlost=100;
+int cenarychlost=100; 
 int cenaenergie=100;
 void gameover(){
    cout<<R"(                                                                                )"<<endl;
@@ -177,8 +177,8 @@ cout<<R"(          _|  |_                _|  |_                _|  |_           
 cout<<R"(       __|  \/  |__          __|  \/  |__          __|  \/  |__          __|  \/  |__          __|  \/  |__          )"<<endl;                                        
 cout<<R"(______|____________|________|____________|________|____________|________|____________|________|____________|_________)"<<endl;
 cout<<R"(|           1                     2                      3                     4                     5              |)"<<endl;
-cout<<R"(|cena     free                   500                    800                  1200                  1800             |)"<<endl;
-cout<<R"(|sila    base+3                 base+8                 base+13              base+18               base+23           |)"<<endl;
+cout<<R"(|cena     free                   500                    600                  650                  700             |)"<<endl;
+cout<<R"(|sila    base+7                 base+14                 base+21              base+28              base+35           |)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 
@@ -209,16 +209,16 @@ void vylepseni(){
     cout<<"___________________________________________UROVEN: "<<uroven<<" ___________________________________________________________________________________"<<endl;
 cout<<R"(|                                                                                                                   | )"<<endl;           
 cout<<R"(|                                                                                                                   |)"<<endl;
-cout<<R"(|    1    ZIVOTY - - -)"<<zivoty<<R"(---->)"<<zivoty+5<<R"(- - - - - - - - - - - -cena:)"<<cenazivoty<<R"(                                       |)"<<endl;
+cout<<R"(|    1    ZIVOTY - - -)"<<zivoty<<R"(---->)"<<zivoty+12<<R"(- - - - - - - - - - - -cena:)"<<cenazivoty<<R"(                                       |)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 cout<<R"(|___________________________________________________________________________________________________________________|)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
-cout<<R"(|    2    UTOK - - - -)"<<utok<<R"(---->)"<<utok+3<<R"(- - - - - - - - - - - - - -cena:)"<<cenautok<<R"(                                         |)"<<endl;
+cout<<R"(|    2    UTOK - - - -)"<<utok<<R"(---->)"<<utok+5<<R"(- - - - - - - - - - - - - -cena:)"<<cenautok<<R"(                                         |)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 cout<<R"(|___________________________________________________________________________________________________________________|)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
-cout<<R"(|    3    ENERGIE- - -)"<<energie<<R"(---->)"<<energie+3<<R"(- - - - - - - - - - - -cena:)"<<cenaenergie<<R"(                                    |)"<<endl;
+cout<<R"(|    3    ENERGIE- - -)"<<energie<<R"(---->)"<<energie+2<<R"(- - - - - - - - - - - -cena:)"<<cenaenergie<<R"(                                    |)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 cout<<R"(|___________________________________________________________________________________________________________________|)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
@@ -238,8 +238,8 @@ cout<<R"(|______________________________________________________________________
 random_device rd;
 mt19937 gen(rd());//toto je pro generování random čísel
 int main(){
-    nepritel=nepritel+6;
-    penize=penize+680+270+310;
+    //nepritel=nepritel+11;
+    //penize=penize+110+150+190+230+270+310+350+390+430+470+510;
     cout<<"Vitejte ve hre!\nVteto hre budete se svym hrdinou bojovat proti nepratelum.\nCeka vas 16 nepratelz toho jsou 2 minibossove, jeden boj s dvema neprateli a jeden boj proti 3 nepratelum.\n";
     cout<<"Nakonec se utkate s bossem Ascendraxem. Kazdy nepritel bude silnejsi nez ten predchozi \na dostanete za nej i lepsi odmenu.";
     cout<<"vas hrdina bude mit 4 atributy: zivoty, utok, energie a rychlost.\nKazdy atribut muzete vylepsovat a tim se vam zvysi uroven a budete mit lepsi sanci na vitezstvi.\n";
@@ -281,50 +281,50 @@ int main(){
     if(nahled==1) {
         cout<<"HP:160";
         cout<<"\nBasic utok:35";
-        cout<<"\nEnergie:18";
+        cout<<"\nEnergie:16";
         cout<<"\nRychlost:5";
         cout<<"\nSuper utok:36";
         zivotymax=160;
         zivoty=160;
         utok=35;
         superutok=2*utok;
-        energie=18;
+        energie=16;
         rychlost=5;
     }else if(nahled==2){
         cout<<"HP:100";
         cout<<"\nBasic utok:56";
-        cout<<"\nEnergie:18";
+        cout<<"\nEnergie:16";
         cout<<"\nRychlost:10";
         cout<<"\nSuper utok:64";
         zivotymax=100;
         zivoty=100;
         utok=56;
         superutok=2*utok;
-        energie=18;
+        energie=16;
         rychlost=10;
     }else if(nahled==3){
         cout<<"HP:125";
         cout<<"\nUtok:41";
-        cout<<"\nEnergie:18";
+        cout<<"\nEnergie:16";
         cout<<"\nRychlost:15";
         cout<<"\nSuper utok:60";
         zivoty=125;
         zivotymax=125;
         utok=41;
         superutok=2*utok;
-        energie=18;
+        energie=16;
         rychlost=15;
     }else if(nahled==4){
         cout<<"HP:110";
         cout<<"\nUtok:65";
-        cout<<"\nEnergie:18";
+        cout<<"\nEnergie:16";
         cout<<"\nRychlost:25";
         cout<<"\nSuper utok:110";
         zivoty=110;
         zivotymax=110;   
         utok=57;
         superutok=2*utok;
-        energie=18;
+        energie=16;
         rychlost=25;
 
     }
@@ -377,25 +377,25 @@ if (volbaobchod==1){
         penize=penize-500;
         levelmece=1;
         superutok=2*utok;
-    }else if(volbaobchod==3&&penize>=800&&levelmece==1){
+    }else if(volbaobchod==3&&penize>=600&&levelmece==1){
         cout<<"Koupili jste zbran level 3\n";
         utok=utok+pomocnapromena3;
         pomocnapromena3=0;
-        penize=penize-800;
+        penize=penize-600;
         levelmece=2;
         superutok=2*utok;   
-    }else if(volbaobchod==4&&penize>=1200&&levelmece==2){
+    }else if(volbaobchod==4&&penize>=650&&levelmece==2){
         cout<<"Koupili jste zbran level 4\n";
         utok=utok+pomocnapromena4;
         pomocnapromena4=0;
-        penize=penize-1200;
+        penize=penize-650;
         levelmece=3;
         superutok=2*utok;
-    }else if(volbaobchod==5&&penize>=1800&&levelmece==3){
+    }else if(volbaobchod==5&&penize>=700&&levelmece==3){
         cout<<"Koupili jste zbran level 5\n";   
         utok=utok+pomocnapromena5;
         pomocnapromena5=0;
-        penize=penize-1800;
+        penize=penize-700;
         levelmece=4;
         superutok=2*utok;
     }  
@@ -412,19 +412,19 @@ if (volbaobchod==1){
     }while(volbaobchod!=1&&volbaobchod!=2&&volbaobchod!=3&&volbaobchod!=4&&volbaobchod!=5);
     if(volbaobchod==1&&penize>=cenazivoty){
         cout<<"Koupili jste vylepseni zivotu";
-        zivoty=zivoty+5;
-        zivotymax=zivotymax+5;
+        zivoty=zivoty+12;
+        zivotymax=zivotymax+12;
         penize=penize-cenazivoty;
         cenazivoty=cenazivoty+100;
     }else if(volbaobchod==2&&penize>=cenautok){
         cout<<"Koupili jste vylepseni utoku";
-        utok=utok+3;
+        utok=utok+5;
         penize=penize-cenautok;
         cenautok=cenautok+100;
         superutok=2*utok;
     }else if(volbaobchod==3&&penize>=cenaenergie){
         cout<<"Koupili jste vylepseni energie";
-        energiemax=energiemax+3;
+        energiemax=energiemax+2;
         energie=energiemax;
         penize=penize-cenaenergie;
         cenaenergie=cenaenergie+100;
@@ -444,9 +444,13 @@ if (volbaobchod==1){
     cout<<"------------------------------------------------\n";
     cout<<"------------------------------------------------\n";
     cout<<"Staty vaseho "<<nepritel+1<<" nepritele:\n";
-    cout<<"Zivoty: "<<polezivotynepritel[nepritel]<<"\nUtok: "<<poleutoknepritel[nepritel]<<"\nSuper utok: "<<polesuperutoknepritel[nepritel]<<"\nOdmena: "<<poleodmenanepritel[nepritel]<<"\n";
-    cout<<"------------------------------------------------\n";
-    cout<<"------------------------------------------------\n";
+    if(nepritel!=15){
+        cout<<"Zivoty: "<<polezivotynepritel[nepritel]<<"\nUtok: "<<poleutoknepritel[nepritel]<<"\nOdmena: "<<poleodmenanepritel[nepritel]<<"\n";
+    }else if (nepritel==15){
+        cout<<"Zivoty: "<<polezivotynepritel[nepritel]<<"\nUtok:? \nOdmena: "<<poleodmenanepritel[nepritel]<<"\n";
+    }
+    cout<<"------------------------------------------------\n"; 
+    cout<<"------------------------------------------------\n";                      
     cout<<"Vase staty jsou:\nZivoty: "<<zivoty<<"\nUtok: "<<utok<<"\nBrneni: "<<brneni<<"\nRychlost: "<<rychlost<<"\nEnergie: "<<energie<<"\n"<<"Uroven: "<<uroven<<"\n";
     cout<<"------------------------------------------------\n";
     cout<<"------------------------------------------------\n";
