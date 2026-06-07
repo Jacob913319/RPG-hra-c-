@@ -3,6 +3,7 @@
 #include <string> //je to proto abych mohl rozdělit string pro vypsání postavyček
 #include <thread> //je to pro to aby program chvíli čekal
 #include <chrono> 
+//_____________________________________Zahrajte si to v VS Code_________________________________________________________ 
 using namespace std;
 int vyberobrazupostavy;
 string nepratelezobrazeni[16];
@@ -32,10 +33,11 @@ int volbaobchodne=0;
 string jmenonepritele[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Upir","Zombik","Obr","Vampir","Drak","Minotaur","Mumie","Kobold","Ork","Troll","Ascendrax"};
 string jmenonepriteledvojboj[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Papir","Zombik","Obr","Vampir","Drak","Piditoraur","Mumie","Kobold","Ork","Troll","Ascendrax"};
 string jmenonepriteletrojboj[16]={"Slizoun","Kostlivec","Golem","Vlkodlak","Demon","Upir","Zombik","Obr","Vampir","Drak","Sinotaur","Mumie","Kobold","Ork","Troll","Ascendrax"};
-int polezivotynepritel[16] = {400,450,500,550,550,600,650,660,705,705,750,795,810,830,850,1000};
-int polezivotyprodvojboj[16] = {400,450,500,550,550,600,650,660,705,705,750,795,810,830,850,1000};
-int polezivotyprotrojboj[16] = {400,450,500,550,550,600,650,660,705,705,750,795,810,830,850,1000};
-int polezivotynepritelmax[16] = {400,450,500,550,550,600,650,660,705,705,750,795,810,830,850,1000};
+int polezivotynepritel[16] = {485,540,595,650,654,710,700,780,725,775,750,795,810,830,850,1000};
+int polezivotyprodvojboj[16] = {485,540,595,650,654,710,700,780,725,775,750,795,810,830,850,1000};
+int polezivotyprotrojboj[16] = {485,540,595,650,654,710,700,780,725,775,750,795,810,830,850,1000};
+//int polezivotyprodvojboj[16] = {400,450,500,550,550,600,650,660,705,705,750,795,810,830,850,1000};ted to fungovalo
+int polezivotynepritelmax[16] = {485,540,595,650,654,710,700,780,725,775,750,795,810,830,850,1000};
 int poleutoknepritel[16] = {10,15,20,23,20,23,27,31,35,39,43,47,48,50,53,57};
 int polesuperutoknepritel[16] = {20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170};
 int poleodmenanepritel[16] = {110,150,190,230,270,310,350,390,430,470,510,550,590,630,670,710};
@@ -206,23 +208,23 @@ cout<<R"(|___|____|______\____/______|____|___|____|____|______\____/______|____
 }
 void vylepseni(){ 
     uroven=((cenazivoty+cenautok+cenaenergie+cenarychlost)/100)/3;
-    cout<<"___________________________________________UROVEN: "<<uroven<<" ___________________________________________________________________________________"<<endl;
+    cout<<"___________________________________________UROVEN: "<<uroven<<" ____________________________________________________"<<endl;
 cout<<R"(|                                                                                                                   | )"<<endl;           
 cout<<R"(|                                                                                                                   |)"<<endl;
-cout<<R"(|    1    ZIVOTY - - -)"<<zivoty<<R"(---->)"<<zivoty+12<<R"(- - - - - - - - - - - -cena:)"<<cenazivoty<<R"(                                       |)"<<endl;
+cout<<R"(|    1    ZIVOTY - - -)"<<zivoty<<R"(---->)"<<zivoty+12<<R"(- - - - - - - - - - - -cena:)"<<cenazivoty<<R"(                            )"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 cout<<R"(|___________________________________________________________________________________________________________________|)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
-cout<<R"(|    2    UTOK - - - -)"<<utok<<R"(---->)"<<utok+5<<R"(- - - - - - - - - - - - - -cena:)"<<cenautok<<R"(                                         |)"<<endl;
+cout<<R"(|    2    UTOK - - - -)"<<utok<<R"(---->)"<<utok+5<<R"(- - - - - - - - - - - - - -cena:)"<<cenautok<<R"(                                  )"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 cout<<R"(|___________________________________________________________________________________________________________________|)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
-cout<<R"(|    3    ENERGIE- - -)"<<energie<<R"(---->)"<<energie+2<<R"(- - - - - - - - - - - -cena:)"<<cenaenergie<<R"(                                    |)"<<endl;
+cout<<R"(|    3    ENERGIE- - -)"<<energie<<R"(---->)"<<energie+2<<R"(- - - - - - - - - - - -cena:)"<<cenaenergie<<R"(                           )"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 cout<<R"(|___________________________________________________________________________________________________________________|)"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
-cout<<R"(|    4     RYCHLOST- )"<<rychlost<<R"(---->)"<<rychlost+3<<R"(- - - - - - - - - - - -cena:)"<<cenarychlost<<R"(                                 |)"<<endl;
+cout<<R"(|    4     RYCHLOST- )"<<rychlost<<R"(---->)"<<rychlost+3<<R"(- - - - - - - - - - - -cena:)"<<cenarychlost<<R"(                            )"<<endl;
 cout<<R"(|                                                                                                                   |)"<<endl;
 cout<<R"(|___________________________________________________________________________________________________________________|)"<<endl;
 
@@ -291,38 +293,38 @@ int main(){
         energie=16;
         rychlost=5;
     }else if(nahled==2){
-        cout<<"HP:100";
-        cout<<"\nBasic utok:56";
+        cout<<"HP:95";
+        cout<<"\nBasic utok:50";
         cout<<"\nEnergie:16";
         cout<<"\nRychlost:10";
         cout<<"\nSuper utok:64";
-        zivotymax=100;
-        zivoty=100;
-        utok=56;
+        zivotymax=95;
+        zivoty=95;
+        utok=50;
         superutok=2*utok;
         energie=16;
         rychlost=10;
     }else if(nahled==3){
         cout<<"HP:125";
-        cout<<"\nUtok:41";
+        cout<<"\nUtok:42";
         cout<<"\nEnergie:16";
         cout<<"\nRychlost:15";
         cout<<"\nSuper utok:60";
         zivoty=125;
         zivotymax=125;
-        utok=41;
+        utok=42;
         superutok=2*utok;
         energie=16;
         rychlost=15;
     }else if(nahled==4){
-        cout<<"HP:110";
-        cout<<"\nUtok:65";
+        cout<<"HP:105";
+        cout<<"\nUtok:47";
         cout<<"\nEnergie:16";
         cout<<"\nRychlost:25";
         cout<<"\nSuper utok:110";
-        zivoty=110;
-        zivotymax=110;   
-        utok=57;
+        zivoty=105;
+        zivotymax=105;   
+        utok=47;
         superutok=2*utok;
         energie=16;
         rychlost=25;
