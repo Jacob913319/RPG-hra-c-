@@ -26,7 +26,7 @@ int pomocnapromena5=35;
 int penize=500;
 string jmenopostavy;
 string zbran;
-int nahled;
+int nahled; 
 int vyber;
 int volbaobchod;
 int volbaobchodne=0; 
