@@ -247,6 +247,7 @@ int main(){
     cout<<"vas hrdina bude mit 4 atributy: zivoty, utok, energie a rychlost.\nKazdy atribut muzete vylepsovat a tim se vam zvysi uroven a budete mit lepsi sanci na vitezstvi.\n";
     cout<<"rychlos znaci jakou mate sanci na to ze se vyhnete utoku nepratele, enrgie se pouziva pro utok a superutok,\nzivoty jsou vase zdraví a utok je kolik poskozeni udelate neprateli.\n";
     cout<<"po kazdem boji budete moci nastivit obchody s vylepsenim a nakoupit lepsi zbran nebo vylepsit sve atributy.\n";
+    cout<<"Pri koupi mecu si je kupujte od 1 do 5 pokud mate 1 a koupite si 3 nepujde to.";
     uniform_int_distribution<> sance(1, 100);//toto je také pro generování random čísel
     uniform_int_distribution<> boss(5, 20);
     nepratelezobrazeni[0]="                                                                  .~.           (o~o)           )_(                                                                                                                  ";
@@ -285,7 +286,7 @@ int main(){
         cout<<"\nBasic utok:35";
         cout<<"\nEnergie:16";
         cout<<"\nRychlost:5";
-        cout<<"\nSuper utok:36";
+        cout<<"\nSuper utok:70";
         zivotymax=160;
         zivoty=160;
         utok=35;
@@ -297,7 +298,7 @@ int main(){
         cout<<"\nBasic utok:50";
         cout<<"\nEnergie:16";
         cout<<"\nRychlost:10";
-        cout<<"\nSuper utok:64";
+        cout<<"\nSuper utok:100";
         zivotymax=95;
         zivoty=95;
         utok=50;
@@ -309,7 +310,7 @@ int main(){
         cout<<"\nUtok:42";
         cout<<"\nEnergie:16";
         cout<<"\nRychlost:15";
-        cout<<"\nSuper utok:60";
+        cout<<"\nSuper utok:84";
         zivoty=125;
         zivotymax=125;
         utok=42;
@@ -317,17 +318,17 @@ int main(){
         energie=16;
         rychlost=15;
     }else if(nahled==4){
-        cout<<"HP:105";
+        cout<<"HP:100";
         cout<<"\nUtok:47";
         cout<<"\nEnergie:16";
-        cout<<"\nRychlost:25";
-        cout<<"\nSuper utok:110";
-        zivoty=105;
-        zivotymax=105;   
+        cout<<"\nRychlost:18";
+        cout<<"\nSuper utok:94";
+        zivoty=100;
+        zivotymax=100;   
         utok=47;
         superutok=2*utok;
         energie=16;
-        rychlost=25;
+        rychlost=18;
 
     }
     cout<<"\nChcete tuto postavu pouzit? 1-ano 2-ne";
